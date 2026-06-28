@@ -2,7 +2,14 @@
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
  */
-@tailwind base;
+@import "tailwindcss" theme(static);
+
+@theme {
+  --color-primary: oklch(0.72 0.11 178);
+  --color-book: oklch(0.72 0.11 178);
+  --color-accent: oklch(0.72 0.11 178);
+  --font-bigtitle: Dosis, sans;
+}
 
 /**
  * Viewport on mobile
@@ -46,7 +53,7 @@
 /**
  * This injects any component classes registered by Tailwind plugins.
  */
-@tailwind components;
+/*@tailwind components;*/
 
 /** Import theme styles */
 @import "components/buttons";
@@ -71,7 +78,7 @@
  * This injects all of Tailwind's utility classes, generated based on your
  * config file.
  */
-@tailwind utilities;
+/*@tailwind utilities;*/
 @import "utilities/backgrounds";
 @import "utilities/basics";
 @import "utilities/transforms";

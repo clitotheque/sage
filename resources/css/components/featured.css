@@ -12,7 +12,9 @@
 .featured-box {
   @apply box-border m-auto;
   @apply bg-accent overflow-hidden;
-  @apply featured-box-size;
+
+  width: var(--width);
+  height: var(--height);
 
   box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0);
 

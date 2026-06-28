@@ -1,5 +1,5 @@
 .main-search {
-  @apply border-none border border-gray-0;
+  @apply border-none border border-gray-50;
   @apply text-4xl bg-white p-3;
 
 

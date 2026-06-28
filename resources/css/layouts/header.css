@@ -5,7 +5,7 @@
 
 
   transition: right 0.4s ease-out,
-              height 0.4s ease-out;
+    height 0.4s ease-out;
 
   &.open {
     right: 0;
@@ -16,7 +16,7 @@
     @apply w-auto;
 
     .nav-primary {
-      @apply text-vw;
+      font-size: 2vw;
     }
   }
 
@@ -65,7 +65,7 @@
   }
 
   &:hover {
-    color: theme('colors.accent');
+    color: var(--color-accent);
   }
 }
 

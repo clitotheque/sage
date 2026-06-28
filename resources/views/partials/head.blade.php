@@ -26,6 +26,6 @@
   <meta property="og:image" name="og:image" content="https://clitotheque.org/app/uploads/2021/02/clitohead_fb.png">
   @endif
 
-  @vite(['resources/css/app.scss', 'resources/js/app.js'])
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
