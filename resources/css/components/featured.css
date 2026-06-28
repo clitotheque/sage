@@ -1,10 +1,12 @@
-$height: 15rem;
-$width: 20rem;
-$meta-height: 4rem;
+:root {
+  --height: 15rem;
+  --width: 20rem;
+  --meta-height: 4rem;
+}
 
 .featured-box-size {
-  width: $width;
-  height: $height;
+  width: var(--width);
+  height: var(--height);
 }
 
 .featured-box {
@@ -25,7 +27,7 @@ $meta-height: 4rem;
 
   .meta-head {
     @apply flex justify-center items-center;
-    height: $meta-height;
+    height: var(--meta-height);
 
     h3 {
       font-size: 1.6rem;
@@ -35,7 +37,7 @@ $meta-height: 4rem;
 
   .meta-description {
     @apply p-4;
-    height: $height - $meta-height;
+    height: calc(var(--height) - var(--meta-height));
     overflow-y: auto;
   }
 }

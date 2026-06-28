@@ -1,9 +1,11 @@
 /* SEARCH & FILTER styles */
-$res_width: 16rem;
-$res_height: 29rem;
-$load_witdh: 5rem;
-$img_h: 16rem;
-$meta_h: 4rem;
+:root {
+  --res_width: 16rem;
+  --res_height: 29rem;
+  --load_witdh: 5rem;
+  --img_h: 16rem;
+  --meta_h: 4rem;
+}
 
 .searchandfilter {
   @apply flex-grow-0 flex-shrink-0;
@@ -73,22 +75,22 @@ $meta_h: 4rem;
     .search-filter-result-item {
       @apply m-6 flex-grow;
       @apply bg-white;
-      width: $res_width;
-      max-width: 1.5 * $res_width;
-      height: $res_height;
+      width: var(--res_width);
+      max-width: 1.5 * var(--res_width);
+      height: var(--res_height);
       animation: slide-up 0.4s ease;
 
       @screen xs {
-        max-width: 1.125 * $res_width !important;
+        max-width: 1.125 * var(--res_width) !important;
       }
 
       .filter {
         @apply inline-block;
-        height: $img_h;
+        height: var(--img_h);
 
         img {
           padding-top: 2.5rem;
-          /*($img_h / 2) - ($load_witdh / 2);*/
+          /*(var(--img_h / 2) - (var(--load_witdh / 2);*/
         }
       }
 
@@ -101,24 +103,24 @@ $meta_h: 4rem;
       }
 
       .result-header {
-        //height: $img_h + $meta_h;
+        //height: calc(var(--img_h) + var(--meta_h));
 
         .result-image {
-          height: $img_h;
+          height: var(--img_h);
           filter: saturate(0.5);
         }
 
         .result-meta {
           @apply overflow-hidden;
           @apply text-center;
-          height: $meta_h;
+          height: var(--meta_h);
         }
       }
 
       .result-excerpt {
         @apply overflow-y-auto overflow-x-hidden;
         @apply p-2;
-        height: $res_height - ($img_h + $meta_h);
+        height: calc(var(--res_height) - (var(--img_h) + var(--meta_h)));
 
         p {
           text-align: left;
@@ -129,13 +131,13 @@ $meta_h: 4rem;
 }
 
 .search-filter-scroll-loading {
-  width: $load_witdh;
-  height: $load_witdh;
+  width: var(--load_witdh);
+  height: var(--load_witdh);
 
-  margin-left: ($res_width - $load_witdh) / 2;
-  margin-right: ($res_width - $load_witdh) / 2;
-  margin-top: ($res_height - $load_witdh) / 2;
-  margin-bottom: ($res_height - $load_witdh) / 2;
+  margin-left: calc((var(--res_width) - var(--load_witdh)) / 2);
+  margin-right: calc((var(--res_width) - var(--load_witdh)) / 2);
+  margin-top: calc((var(--res_height) - var(--load_witdh)) / 2);
+  margin-bottom: calc((var(--res_height) - var(--load_witdh)) / 2);
 
   animation: scale-up 0.2s ease, search-filter-loader-rotate .7s infinite linear;
   animation-delay: 0s, 0.2s;
