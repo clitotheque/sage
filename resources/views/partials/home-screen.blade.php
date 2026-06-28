@@ -5,7 +5,7 @@
     <div class="absolute full bg-accent opacity-90"></div>
     <div class="flex flex-col items-center justify-center full z-40">
       <div class="w-full z-40 mb-16 relative">
-        <img width="100%" src="{{ Vite::asset('resources/'images/temp_logo.svg') }}" />
+        <img width="100%" src="{{ Vite::asset('resources/images/temp_logo.svg') }}" />
         <div class="absolute w-3/4 z-40 text-right subtitle">
           <h3 class="italic">{{ pll__( 'Base collaborative de ressources sur le plaisir féminin' ) }}</h3>
         </div>
