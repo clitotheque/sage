@@ -9,7 +9,7 @@ if (!process.env.APP_URL) {
 }
 
 export default defineConfig({
-  base: '/Users/ulysse/tmp/clitothèque/bedrock/web/app/themes/clitotheme/public/build/',
+  base: '/app/themes/clitotheme-new/public/build/',
   plugins: [
     tailwindcss(),
     laravel({

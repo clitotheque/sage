@@ -1,7 +1,7 @@
 <div class="relative justify-center w-full h-screen z-45 bg-topo">
   {{-- Background --}}
   <div class="absolute full bg-tr"></div>
-  <div class="absolute full lg:w-2/3  left-0">
+  <div class="absolute h-full w-full lg:w-2/3 left-0">
     <div class="absolute full bg-accent opacity-90"></div>
     <div class="flex flex-col items-center justify-center full z-40">
       <div class="w-full z-40 mb-16 relative">

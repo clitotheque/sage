@@ -9,7 +9,7 @@
 }
 
 .bg-topo {
-  background: url('../images/temp_topo.svg') white top right;
+  background: url('@images/temp_topo.svg') white top right;
   background-size: 700px;
   /*50%;*/
 }
