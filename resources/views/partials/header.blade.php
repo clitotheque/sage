@@ -38,7 +38,7 @@
 
 <div class="fixed top-0 right-0 z-50">
   <img id="menu-switch" width="30px" class="inline-block md:hidden m-5 z-50"
-    src="{{ Vite::asset('resources/'images/icons/menu.svg') }}" alt="Menu" />
+    src="{{ Vite::asset('resources/images/icons/menu.svg') }}" alt="Menu" />
   <a href="https://www.facebook.com/Clitoth%C3%A8que-104473844947529" target="_blank">
     <img class="hidden w-5 lg:w-6 md:inline-block top-right-icon"
       src="{{ Vite::asset('resources/images/icons/facebook.svg') }}" alt="Facebook" /></a>
