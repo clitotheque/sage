@@ -11,19 +11,12 @@
     right: 0;
   }
 
-  @screen md {
-    @apply sticky h-20;
-    @apply w-auto;
+  @apply md:sticky md:h-20;
+  @apply md:w-auto;
 
-    .nav-primary {
-      font-size: 2vw;
-    }
-  }
-
-  @screen xl {
-    .nav-primary {
-      @apply text-3xl;
-    }
+  & .nav-primary {
+    @apply md:text-[2vw];
+    @apply xl:text-3xl;
   }
 }
 
@@ -40,29 +33,22 @@
       @apply w-full;
     }
 
-    @screen md {
-      @apply w-auto;
+    @apply md:w-auto;
 
-      .menu-item {
-        @apply w-auto;
-      }
+    & .menu-item {
+      @apply md:w-auto;
     }
   }
 
-  @screen md {
-    ul.nav li.lang-item:last-of-type {
-      position: absolute;
-      right: 8.5rem;
-    }
+  & ul.nav li.lang-item:last-of-type {
+    @apply md:absolute md:right-[8.5rem];
   }
 }
 
 .banner .nav a {
   @apply inline-block w-full px-4 py-2 border-none;
 
-  @screen md {
-    @apply w-auto
-  }
+  @apply md:w-auto;
 
   &:hover {
     color: var(--color-accent);

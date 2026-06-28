@@ -48,7 +48,7 @@
 
 /** Slick carousel */
 @import 'slick-carousel/slick/slick.css';
-@import 'slick-carousel/slick/slick-theme.scss';
+@import 'slick-carousel/slick/slick-theme.css';
 
 /**
  * This injects any component classes registered by Tailwind plugins.

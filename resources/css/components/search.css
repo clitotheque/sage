@@ -58,10 +58,12 @@
     width: 100% !important;
   }
 
-  @screen md {
+  /* @screen md {
     width: 16rem !important;
     max-width: 25%;
-  }
+  } */
+
+  @apply md:w-3xs! md:max-w-1/4
 }
 
 .search-filter-results {
@@ -80,9 +82,12 @@
       height: var(--res_height);
       animation: slide-up 0.4s ease;
 
-      @screen xs {
+      /* @screen xs {
         max-width: 1.125 * var(--res_width) !important;
-      }
+      } */
+
+      --max: calc(1.125 * var(--res_width))
+      @apply xs:max-v-[var(--max)]!;
 
       .filter {
         @apply inline-block;

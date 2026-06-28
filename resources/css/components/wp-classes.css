@@ -25,7 +25,7 @@
   height: auto;
 }
 
-@screen sm {
+@media (min-width: env(--breakpoint-sm)) {
   .alignleft {
     @apply mr-4;
 

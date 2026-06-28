@@ -4,13 +4,15 @@
 
   font-size: 1.8vw;
 
-  h3 {
+  & h3 {
     font-size: inherit;
   }
 
-  @screen lg {
+  /* @screen lg {
     font-size: 1.2vw;
-  }
+  } */
+
+  @apply lg:text-[1.2vw]
 }
 
 
@@ -18,16 +20,20 @@
   0% {
     color: black;
   }
+
   30% {
     color: #E2A50D;
   }
+
   60% {
     color: black;
   }
+
   100% {
     color: black;
   }
 }
+
 .blink {
   animation: blinking 4s infinite;
 
