@@ -1,38 +1,48 @@
 <!doctype html>
-<html @php(language_attributes())>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    @php(do_action('get_header'))
-    @php(wp_head())
+<html class="text-xs md:text-sm xl:text-base" {!! get_language_attributes() !!}>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-  </head>
+@include('partials.head')
 
-  <body @php(body_class())>
-    @php(wp_body_open())
+<body @php body_class([ 'bg-dotted' , 'bg-fixed' , 'relative' , 'overflow-x-hidden' , 'w-full' , 'h-full' ]) @endphp>
 
-    <div id="app">
-      <a class="sr-only focus:not-sr-only" href="#main">
-        {{ __('Skip to content', 'sage') }}
-      </a>
+  @yield('before')
 
-      @include('sections.header')
+  @php do_action('get_header') @endphp
+  @include('partials.header')
 
-      <main id="main" class="main">
-        @yield('content')
-      </main>
+  @yield('main')
 
-      @hasSection('sidebar')
-        <aside class="sidebar">
-          @yield('sidebar')
-        </aside>
-      @endif
+  @php do_action('get_footer') @endphp
+  @include('partials.footer')
 
-      @include('sections.footer')
-    </div>
+  <div class="h-40 w-full overflow-hidden bg-accent"
+    style="background: url({{ Vite::asset('resources/images/temp/footer.jpg') }}); background-size:cover; background-position: center">
+    <a href="{{ get_home_url() }}" class="h-full w-full block">&nbsp;</a>
+  </div>
 
-    @php(do_action('get_footer'))
-    @php(wp_footer())
-  </body>
+  {{-- Populate auto-complete with categories, tags, etc
+    <script type="text/javascript">
+      var terms_res_types = [
+        @php
+        $categories = get_terms(array(
+            'taxonomy' => 'category',
+            'hide_empty' => true,
+        ));
+        $types = get_terms(array(
+            'taxonomy' => 'res_types',
+            'hide_empty' => true,
+        ));
+        foreach($categories as $category) {
+          echo "'" .$category->name . "'," ;
+        }
+        foreach($types as $type) {
+          echo "'" .$type->name . "'," ;
+        }
+        @endphp
+      ];
+    </script>--}}
+
+  @php wp_footer() @endphp
+</body>
+
 </html>
