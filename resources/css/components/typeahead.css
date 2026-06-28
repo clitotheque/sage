@@ -114,11 +114,11 @@
   font-size: 14px;
 }
 
-// specific 
+/* specific */
 
 #custom-templates .empty-message {
   padding: 5px 10px;
- text-align: center;
+  text-align: center;
 }
 
 #multiple-datasets .league-name {
@@ -135,4 +135,5 @@
 #rtl-support .tt-menu {
   text-align: right;
 }
+
 */
