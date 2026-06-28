@@ -1,0 +1,46 @@
+.portrait {
+  @apply  w-84;
+}
+
+.landscape {
+  @apply w-96;
+}
+
+.sat-hover {
+  filter: saturate(0.5);
+  transition: filter 0.15s ease;
+}
+.post-box:hover {
+  .sat-hover {
+    filter: saturate(1);
+  }
+}
+
+.copyright_before::before {
+  content: "©";
+  position: relative;
+  top: 1px;
+  margin: 0.5rem;
+}
+
+.with-dotted-links a {
+  text-decoration: underline dotted !important;
+}
+
+.guillemet::before {
+  content: "\201F";
+  margin-right: 1rem;
+  left: -4rem;
+  position: relative;
+  font-size: 7rem;
+  line-height: 5rem;
+  color: lightgray;
+}
+
+.right-column .wpulike {
+  @apply absolute top-0 right-0;
+}
+
+.right-column .post-title h1 {
+  padding-right: 100px;
+}

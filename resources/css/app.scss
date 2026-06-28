@@ -1,0 +1,81 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ */
+@tailwind base;
+
+/**
+ * Viewport on mobile
+ */
+@viewport {
+  width: device-width;
+  /* largeur du viewport */
+  zoom: 1;
+  /* zoom initial à 1.0 (et clin d'oeil aux fans d'IE6/7) */
+}
+
+/**
+ * Custom fonts
+ */
+//thin 100 -> bold 700
+// @font-face {
+//   font-family: 'Palanquin';
+//   font-weight: 100;
+//   src: url(../fonts/palanquin/Palanquin-Thin.ttf);
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+/** Import variables */
+@import "common/variables";
+
+/** Import everything from autoload */
+//@import "./autoload/**/*";
+
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+/** Slick carousel */
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.scss';
+
+// @import "~some-node-module";
+/**
+ * This injects any component classes registered by Tailwind plugins.
+ */
+@tailwind components;
+
+/** Import theme styles */
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+
+@import "components/black_section";
+@import "components/featured";
+@import "components/search";
+@import "components/typeahead";
+@import "components/title";
+@import "components/homescreen";
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ */
+@tailwind utilities;
+@import "utilities/backgrounds";
+@import "utilities/basics";
+@import "utilities/transforms";

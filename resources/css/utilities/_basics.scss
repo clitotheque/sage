@@ -1,0 +1,56 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.full {
+  @apply w-full;
+  @apply h-full;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.flex-grow-100 {
+  flex-grow: 100;
+}
+
+.left-column {
+  min-width: 20rem;
+  max-width: 30rem;
+
+    img {
+      width: 100%;
+    }
+}
+.right-column {
+  min-width: 20rem;
+  max-width: 45rem;
+}
+
+.font-weight-5 {
+  font-size: 500;
+}
+
+.text-45xl {
+  font-size: 2.5rem;
+}
+
+.text-vw {
+  font-size: 2vw;
+}
+
+.z-45 {
+  z-index: 45;
+}
+
+.blurry {
+  filter: blur(8px) saturate(0.7);
+}
+
+.no_link_effect {
+  &:hover{
+    text-decoration: none !important;
+    color: initial !important;
+  }
+}

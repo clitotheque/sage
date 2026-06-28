@@ -1,0 +1,22 @@
+.bg-dotted {
+  $dot-color: #606060;
+  background-image:
+    radial-gradient($dot-color 7%, transparent 7%),
+    radial-gradient($dot-color 7%, transparent 7%);
+  background-color: white;
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+}
+
+.bg-topo {
+  background: url('../images/temp_topo.svg') white top right;
+  background-size: 700px; //50%;
+}
+
+.bg-tr {
+  background: #ffffff73;
+}
+
+.bg-transp-white {
+  background-color: #ffffffe8;
+}

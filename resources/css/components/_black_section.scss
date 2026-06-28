@@ -1,0 +1,7 @@
+.black-section {
+  @apply w-full p-4 bg-primary text-white;
+
+  h1 {
+    @apply text-center uppercase;
+  }
+}

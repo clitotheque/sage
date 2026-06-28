@@ -1,0 +1,80 @@
+.banner-wrapper {
+  @apply fixed top-0 w-screen h-screen z-50;
+  @apply bg-book;
+  right: 100%;
+
+
+  transition: right 0.4s ease-out,
+              height 0.4s ease-out;
+
+  &.open {
+    right: 0;
+  }
+
+  @screen md {
+    @apply sticky h-20;
+    @apply w-auto;
+
+    .nav-primary {
+      @apply text-vw;
+    }
+  }
+
+  @screen xl {
+    .nav-primary {
+      @apply text-3xl;
+    }
+  }
+}
+
+.banner {
+  @apply relative w-full h-full p-0 bg-white;
+
+  .nav {
+    @apply list-none p-0 w-full flex flex-wrap;
+    @apply font-bigtitle;
+    font-weight: normal;
+    text-transform: uppercase;
+
+    .menu-item {
+      @apply w-full;
+    }
+
+    @screen md {
+      @apply w-auto;
+
+      .menu-item {
+        @apply w-auto;
+      }
+    }
+  }
+
+  @screen md {
+    ul.nav li.lang-item:last-of-type {
+      position: absolute;
+      right: 8.5rem;
+    }
+  }
+}
+
+.banner .nav a {
+  @apply inline-block w-full px-4 py-2 border-none;
+
+  @screen md {
+    @apply w-auto
+  }
+
+  &:hover {
+    color: theme('colors.accent');
+  }
+}
+
+.top-right-icon {
+  margin-top: 1.75rem !important;
+  margin-right: 0.25rem !important;
+}
+
+.top-right-icon-mail {
+  margin-top: 1.75rem !important;
+  margin-right: 1rem !important;
+}

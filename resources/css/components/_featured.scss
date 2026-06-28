@@ -1,0 +1,45 @@
+$height: 15rem;
+$width: 20rem;
+$meta-height: 4rem;
+
+.featured-box-size {
+  width: $width;
+  height: $height;
+}
+
+.featured-box {
+  @apply box-border m-auto;
+  @apply bg-accent overflow-hidden;
+  @apply featured-box-size;
+
+  box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 0);
+
+  &:hover {
+    box-shadow: inset 0px 0px 0px 3px rgba(255, 255, 255, 1);
+  }
+}
+
+.featured-meta {
+  @apply absolute bottom-0 w-full bg-white;
+  @apply text-primary text-center;
+
+  .meta-head {
+    @apply flex justify-center items-center;
+    height: $meta-height;
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .meta-description {
+    @apply p-4;
+    height: $height - $meta-height;
+    overflow-y: auto;
+  }
+}
+
+.slick-slide {
+  height: auto;
+}

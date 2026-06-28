@@ -14,9 +14,9 @@ export default defineConfig({
     tailwindcss(),
     laravel({
       input: [
-        'resources/css/app.css',
+        'resources/css/app.scss',
         'resources/js/app.js',
-        'resources/css/editor.css',
+        'resources/css/editor.scss',
         'resources/js/editor.js',
       ],
       refresh: true,
