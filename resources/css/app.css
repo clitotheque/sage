@@ -61,21 +61,120 @@
 @source "../../app/**/*.php";
 @source "../**/*.blade.php";
 @source "../**/*.js";
+@source inline("bg-accent bg-primary bg-white bg-video bg-book bg-link bg-film bg-site");
 
 @utility container {
   margin-inline: auto;
   padding-inline: 1rem;
+}
 
-  @media (width >=theme(--breakpoint-sm)) {
-    padding-inline: 2rem;
-  }
+@utility inset-2\/3 {
+  inset: 66%;
 }
 
 @theme {
-  --color-primary: rgb(32, 32, 32);
-  --color-book: oklch(0.72 0.11 178);
-  --color-accent: rgba(226, 165, 13, 1);
-  --font-bigtitle: Dosis, Open sans, "sans-serif";
+  --color-accent: #E2A50D;
+  --color-primary: #000000;
+  --color-white: #fff;
+  --color-video: #E55428;
+  --color-book: #2E6EB2;
+  --color-link: #F3B58D;
+  --color-film: #F5D8D5;
+  --color-site: #6c9b8b;
+  --color-gray-0: #d1d1d1;
+  --color-gray-100: #f7fafc;
+  --color-gray-200: #edf2f7;
+  --color-gray-300: #e2e8f0;
+  --color-gray-400: #cbd5e0;
+  --color-gray-500: #a0aec0;
+  --color-gray-600: #718096;
+  --color-gray-700: #4a5568;
+  --color-gray-800: #2d3748;
+  --color-gray-900: #1a202c;
+
+  --shadow-outline: 0 0 0 3px rgba(82, 93, 220, 0.3);
+
+  --breakpoint-xs: 420px;
+  --breakpoint-md: 950px;
+
+  --font-bigtitle: Dosis, Open sans, sans-serif;
+  --font-title: Open sans, sans-serif;
+  --font-sans: Open sans, sans-serif;
+  --font-display: Open sans, sans-serif;
+  --font-body: Open sans, sans-serif;
+
+  --opacity-90: 0.9;
+
+  --border-width-10: 10px;
+  --border-width-14: 14px;
+
+  --spacing-72: 18rem;
+  --spacing-84: 21rem;
+  --spacing-96: 24rem;
+}
+
+@layer base {
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
+
+  p {
+    margin-bottom: --spacing(3);
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: --spacing(2);
+    line-height: 1.25;
+  }
+
+  h1 {
+    font-family: Dosis, Open sans, sans-serif;
+    font-weight: 500;
+    font-size: var(--text-5xl);
+    margin-bottom: --spacing(2);
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: var(--text-4xl);
+  }
+
+  h3 {
+    font-size: var(--text-3xl);
+  }
+
+  h4 {
+    font-size: var(--text-2xl);
+  }
+
+  h5 {
+    font-size: var(--text-xl);
+  }
+
+  ol,
+  ul {
+    padding-left: --spacing(4);
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
 }
 
 /**
