@@ -23,13 +23,13 @@
 .banner {
   @apply relative w-full h-full p-0 bg-white;
 
-  .nav {
+  & .nav {
     @apply list-none p-0 w-full flex flex-wrap;
     @apply font-bigtitle;
     font-weight: normal;
     text-transform: uppercase;
 
-    .menu-item {
+    & .menu-item {
       @apply w-full;
     }
 

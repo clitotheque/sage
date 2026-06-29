@@ -27,7 +27,7 @@
   @apply absolute bottom-0 w-full bg-white;
   @apply text-primary text-center;
 
-  .meta-head {
+  & .meta-head {
     @apply flex justify-center items-center;
     height: var(--meta-height);
 
@@ -37,7 +37,7 @@
     }
   }
 
-  .meta-description {
+  & .meta-description {
     @apply p-4;
     height: calc(var(--height) - var(--meta-height));
     overflow-y: auto;

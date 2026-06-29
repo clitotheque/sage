@@ -19,10 +19,11 @@ html {
   min-width: 20rem;
   max-width: 30rem;
 
-    img {
-      width: 100%;
-    }
+  & img {
+    width: 100%;
+  }
 }
+
 .right-column {
   min-width: 20rem;
   max-width: 45rem;
@@ -49,7 +50,7 @@ html {
 }
 
 .no_link_effect {
-  &:hover{
+  &:hover {
     text-decoration: none !important;
     color: initial !important;
   }

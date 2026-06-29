@@ -1,5 +1,5 @@
 .portrait {
-  @apply  w-84;
+  @apply w-84;
 }
 
 .landscape {
@@ -10,8 +10,9 @@
   filter: saturate(0.5);
   transition: filter 0.15s ease;
 }
+
 .post-box:hover {
-  .sat-hover {
+  & .sat-hover {
     filter: saturate(1);
   }
 }

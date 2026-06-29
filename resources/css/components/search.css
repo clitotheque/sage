@@ -13,24 +13,24 @@
   @apply p-6;
   @apply bg-white;
 
-  h4 {
+  & h4 {
     font-weight: 600;
   }
 
-  ul {
+  & ul {
     @apply w-full;
     padding: 0;
 
-    li {
+    & li {
       @apply w-full;
 
-      label {
+      & label {
         @apply w-full;
       }
     }
   }
 
-  .sf-input-text {
+  & .sf-input-text {
     width: 100% !important;
     @apply p-1 pl-2 pr-2;
     @apply rounded-md;
@@ -38,23 +38,23 @@
     border-color: #AAA;
   }
 
-  [data-sf-field-input-type="radio"] {
+  & [data-sf-field-input-type="radio"] {
 
     /* Styles */
-    .sf-label-radio {
+    & .sf-label-radio {
       @apply inline w-auto;
     }
   }
 
-  [data-sf-field-input-type="checkbox"] {
+  & [data-sf-field-input-type="checkbox"] {
 
     /* Styles */
-    .sf-label-checkbox {
+    & .sf-label-checkbox {
       @apply inline w-auto;
     }
   }
 
-  .chosen-container {
+  & .chosen-container {
     width: 100% !important;
   }
 
@@ -69,12 +69,12 @@
 .search-filter-results {
   @apply flex-grow;
 
-  .search-filter-results-list {
+  & .search-filter-results-list {
     @apply flex flex-row flex-wrap w-full;
     justify-content: center;
     justify-content: space-evenly;
 
-    .search-filter-result-item {
+    & .search-filter-result-item {
       @apply m-6 flex-grow;
       @apply bg-white;
       width: var(--res_width);
@@ -89,17 +89,17 @@
       --max: calc(1.125 * var(--res_width))
       @apply xs:max-v-[--max];
 
-      .filter {
+      & .filter {
         @apply inline-block;
         height: var(--img_h);
 
-        img {
+        & img {
           padding-top: 2.5rem;
           /*(var(--img_h / 2) - (var(--load_witdh / 2);*/
         }
       }
 
-      a {
+      & a {
         opacity: 0.0;
 
         &:hover {
@@ -107,27 +107,27 @@
         }
       }
 
-      .result-header {
+      & .result-header {
         /*height: calc(var(--img_h) + var(--meta_h));*/
 
-        .result-image {
+        & .result-image {
           height: var(--img_h);
           filter: saturate(0.5);
         }
 
-        .result-meta {
+        & .result-meta {
           @apply overflow-hidden;
           @apply text-center;
           height: var(--meta_h);
         }
       }
 
-      .result-excerpt {
+      & .result-excerpt {
         @apply overflow-y-auto overflow-x-hidden;
         @apply p-2;
         height: calc(var(--res_height) - (var(--img_h) + var(--meta_h)));
 
-        p {
+        & p {
           text-align: left;
         }
       }
