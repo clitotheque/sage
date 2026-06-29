@@ -43,6 +43,7 @@
     </script>--}}
 
   @php wp_footer() @endphp
+  @vite('resources/js/app.js')
 </body>
 
 </html>
