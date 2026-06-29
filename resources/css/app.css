@@ -1,27 +1,4 @@
 /**
- * This injects Tailwind's base styles, which is a combination of
- * Normalize.css and some additional base styles.
- */
-@import "tailwindcss" theme(static);
-
-@theme {
-  --color-primary: oklch(0.72 0.11 178);
-  --color-book: oklch(0.72 0.11 178);
-  --color-accent: oklch(0.72 0.11 178);
-  --font-bigtitle: Dosis, sans;
-}
-
-/**
- * Viewport on mobile
- */
-@viewport {
-  width: device-width;
-  /* largeur du viewport */
-  zoom: 1;
-  /* zoom initial à 1.0 (et clin d'oeil aux fans d'IE6/7) */
-}
-
-/**
  * Custom fonts
  */
 /*thin 100 -> bold 700
@@ -34,6 +11,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ */
+@import "tailwindcss" theme(static);
+
 
 /** Import variables */
 @import "common/variables";
@@ -49,11 +33,6 @@
 /** Slick carousel */
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
-
-/**
- * This injects any component classes registered by Tailwind plugins.
- */
-/*@tailwind components;*/
 
 /** Import theme styles */
 @import "components/buttons";
@@ -74,11 +53,29 @@
 @import "components/title";
 @import "components/homescreen";
 
-/**
- * This injects all of Tailwind's utility classes, generated based on your
- * config file.
- */
-/*@tailwind utilities;*/
 @import "utilities/backgrounds";
 @import "utilities/basics";
 @import "utilities/transforms";
+
+
+@source "../../app/**/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+
+
+@theme {
+  --color-primary: rgb(32, 32, 32);
+  --color-book: oklch(0.72 0.11 178);
+  --color-accent: rgba(226, 165, 13, 1);
+  --font-bigtitle: Dosis, Open sans, "sans-serif";
+}
+
+/**
+ * Viewport on mobile
+ */
+@viewport {
+  width: device-width;
+  /* largeur du viewport */
+  zoom: 1;
+  /* zoom initial à 1.0 (et clin d'oeil aux fans d'IE6/7) */
+}

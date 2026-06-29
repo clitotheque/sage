@@ -87,7 +87,7 @@
       } */
 
       --max: calc(1.125 * var(--res_width))
-      @apply xs:max-v-[var(--max)]!;
+      @apply xs:max-v-[--max];
 
       .filter {
         @apply inline-block;
@@ -108,7 +108,7 @@
       }
 
       .result-header {
-        //height: calc(var(--img_h) + var(--meta_h));
+        /*height: calc(var(--img_h) + var(--meta_h));*/
 
         .result-image {
           height: var(--img_h);
@@ -151,12 +151,12 @@
 @keyframes slide-up {
   0% {
     opacity: 0;
-    //   transform: translateY(20px);
+    /*   transform: translateY(20px); */
   }
 
   100% {
     opacity: 1;
-    //   transform: translateY(0);
+    /*   transform: translateY(0); */
   }
 }
 
